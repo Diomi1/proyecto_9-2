@@ -25,7 +25,6 @@ function startCountdown() {
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
         document.getElementById("contador").innerHTML = `
-            ${years} años,
             ${days} días,
             ${hours} horas,
             ${minutes} minutos,
