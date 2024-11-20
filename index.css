@@ -189,6 +189,15 @@ form label {
   padding: 30px;
 }
 
+.imagen_contenedor2 {
+    width: 320px;
+  height: 320px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  transform: rotate(-1deg);
+  padding: 30px;
+}
+
 .shx {
   display: flex;
   flex-direction: row;
@@ -219,9 +228,18 @@ form label {
   transition: all 0.5s ease;
 }
 
-.contenedor_imagen:hover {
-  transform: translateY(-10px);
+.contenedor_imagen2 {
+  transition: all 0.5s ease;
 }
+
+.contenedor_imagen:hover {
+    transform: rotate(-3deg);
+}
+
+.contenedor_imagen2:hover {
+transform: rotate(2deg);
+}
+
 
 .imagen_contenedor_lista {
   border-radius: 8px;
