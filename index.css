@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -585,4 +588,49 @@ textarea:focus {
   50% {
     border-color: rgb(0, 0, 0);
   }
+}
+
+
+
+
+@media (max-width: 900px) {
+  .galeria {
+    display: flex;
+    overflow-x: scroll; /* Desplazamiento horizontal */
+    justify-content: center; /* Centra el contenido */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 5px; /* Ajusta el padding */
+    scroll-snap-type: x mandatory; /* Desplazamiento fluido */
+  }
+
+  .imagen_galeria {
+    flex: 0 0 auto; /* Las imágenes ocupan su tamaño contenido */
+    width: 70%; /* Tamaño relativo de las imágenes */
+    max-width: 250px; /* Tamaño máximo */
+    margin: 0 auto; /* Centra la imagen */
+    scroll-snap-align: center; /* Asegura que cada imagen quede centrada al desplazarse */
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    gap: 15px; /* Ajusta el espacio entre imágenes para pantallas más pequeñas */
+    padding: 10px; /* Ajusta el padding general */
+  }
+
+  .imagen_galeria {
+    width: 80%; /* Aumenta el tamaño de las imágenes */
+    max-width: 300px; /* Ajusta el tamaño máximo */
+    margin: 0 auto; /* Centra la imagen dentro de la galería */
+  }
+}
+
+/* Opcional: Ocultar barra de scroll */
+.galeria::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento */
+}
+
+.galeria {
+  -ms-overflow-style: none; /* Oculta barra en IE/Edge */
+  scrollbar-width: none; /* Oculta barra en Firefox */
 }
